@@ -4076,3 +4076,79 @@ input, select, textarea {
   .texto-marrom {
 	color: var(--marrom-escuro);
   }
+
+  /* sobre nos */
+  .caramelo-escuro {
+	color: #8B5E3C;
+}
+.fundo-com-hover {
+	position: relative;
+	padding: 100px 20px;
+	z-index: 1;
+	overflow: hidden;
+	color: rgb(255, 0, 0);
+}
+.fundo-com-hover::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/images/sobreNos/fundo-sobre.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: scaleY(-1);
+	z-index: -1;
+	opacity: 1;
+}
+.fundo-com-hover:hover::before {
+	background-size: 150%;
+}
+.fundo-com-hover h1,
+.fundo-com-hover p {
+	color: #f8f1ec;
+}
+.sessao-sobre {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 2rem;
+	margin: 4rem 0;
+	padding: 2rem;
+	background-color: #fde8da;
+	border-radius: 1rem;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+.sessao-sobre .imagem {
+	flex: 1 1 300px;
+	text-align: center;
+}
+.sessao-sobre .imagem img {
+	max-width: 100%;
+	height: auto;
+
+}
+.sessao-sobre .conteudo {
+	flex: 2 1 400px;
+}
+.sessao-sobre h2 {
+	margin-bottom: 0.5em;
+	color: #8B5E3C;
+}
+.sessao-sobre p,
+.sessao-sobre ul {
+	color: #8B5E3C;
+	font-size: 1.1em;
+	line-height: 1.6;
+}
+@media (max-width: 768px) {
+	.sessao-sobre {
+		flex-direction: column;
+		text-align: center;
+	}
+	.sessao-sobre .conteudo {
+		flex: unset;
+	}
+}
